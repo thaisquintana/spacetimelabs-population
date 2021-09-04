@@ -22,6 +22,12 @@
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "*.{js, jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -77,11 +83,5 @@
     "hooks": {
       "pre-commit": "lint-staged && yarn test:pre"
     }
-  },
-  "lint-staged": {
-    "*.{js}": [
-      "eslint --fix",
-      "git add"
-    ]
   }
 }

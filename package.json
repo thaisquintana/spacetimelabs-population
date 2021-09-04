@@ -16,9 +16,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cross-env test --ci --env jest-environment-jsdom-sixteen",
-    "test:pre": "cross-env test --watchAll=false --silent --env jest-environment-jsdom-sixteen",
-    "test:coverage": "cross-env test --ci --env jest-environment-jsdom-sixteen --coverage --watchAll",
+    "test": "test  jest-environment-jsdom-sixteen",
+    "test:pre": "test --watchAll=false --silent --env jest-environment-jsdom-sixteen",
+    "test:coverage": "test  jest-environment-jsdom-sixteen --coverage --watchAll",
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
@@ -26,24 +26,6 @@
     "*.{js, jsx}": [
       "eslint --fix",
       "git add"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
     ]
   },
   "jest": {
@@ -64,6 +46,24 @@
       "!src/tests/*.js",
       "!src/**/*.test.js",
       "!src/**/styles.js"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
   },
   "devDependencies": {

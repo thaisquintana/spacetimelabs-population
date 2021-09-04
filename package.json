@@ -1,0 +1,82 @@
+{
+  "name": "population-map",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^12.1.10",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-import-helpers": "^1.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.25.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-unused-imports": "^1.1.4",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "mapbox-gl": "^2.4.1",
+    "prettier": "^2.3.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "styled-components": "^5.3.1",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && yarn test:pre"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/setup-jest.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(@ui5|lit-html)).*\\.js$"
+    ],
+    "moduleNameMapper": {
+      "~(.*)$": "<rootDir>/src/$1"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "src/**/**/*.js",
+      "src/**/**/**/*.js",
+      "!src/tests/*.js",
+      "!src/**/*.test.js",
+      "!src/**/styles.js"
+    ]
+  }
+}

@@ -32,6 +32,7 @@ const Map = () => {
         style={{ height: '100vh' }}
         zoom={14}
         center={[-23.20827026939924, -45.908432084467613]}
+        data-testid="map-population"
       >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

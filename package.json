@@ -17,9 +17,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "test --ci --env jest-environment-jsdom-sixteen",
+    "test": "test jest-environment-jsdom-sixteen",
     "test:pre": "test --watchAll=false --silent --env jest-environment-jsdom-sixteen",
-    "test:coverage": "test --ci --env jest-environment-jsdom-sixteen --coverage --watchAll",
+    "test:coverage": "test  jest-environment-jsdom-sixteen --coverage --watchAll",
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
@@ -29,8 +29,8 @@
     ]
   },
   "jest": {
-    "setupFiles": [
-      "<rootDir>/setup-jest.js"
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.js"
     ],
     "transformIgnorePatterns": [
       "node_modules/(?!(@ui5|lit-html)).*\\.js$"

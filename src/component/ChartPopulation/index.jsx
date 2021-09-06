@@ -11,7 +11,7 @@ const ChartPopulation = (props) => {
   const filterDistrict = population.filter(columns)
 
   return (
-    <PopulationData>
+    <PopulationData data-testid={`district-${props.district}`}>
       <Container>
         {filterDistrict.map((data) => {
           const valueInDecimals = data.populacao.toLocaleString({ maximumSignificantDigits: 2 })
@@ -20,10 +20,14 @@ const ChartPopulation = (props) => {
           const totalPopulation = data.populacao.toLocaleString()
           return (
             <Chart key={data.ano}>
-              <People height={heightBars * 4} colors={randomColors}>
+              <People
+                height={heightBars * 4}
+                colors={randomColors}
+                data-testid={`growth-${data.populacao}`}
+              >
                 <p>{totalPopulation}</p>
               </People>
-              <Year>{data.ano}</Year>
+              <Year data-testid={`year-${data.ano}`}>{data.ano}</Year>
             </Chart>
           )
         })}

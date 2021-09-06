@@ -16,9 +16,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "test  jest-environment-jsdom-sixteen",
+    "test": "test --ci --env jest-environment-jsdom-sixteen",
     "test:pre": "test --watchAll=false --silent --env jest-environment-jsdom-sixteen",
-    "test:coverage": "test  jest-environment-jsdom-sixteen --coverage --watchAll",
+    "test:coverage": "test --ci --env jest-environment-jsdom-sixteen --coverage --watchAll",
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
@@ -76,7 +76,6 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-unused-imports": "^1.1.4",
     "husky": "^7.0.2",
-    "jest-environment-jsdom-sixteen": "^2.0.0",
     "lint-staged": "^11.1.2",
     "prettier": "^2.3.2"
   },

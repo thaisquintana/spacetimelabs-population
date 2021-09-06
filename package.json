@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^12.1.10",
+    "jest-dom": "^4.0.0",
     "leaflet": "^1.7.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -18,8 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "test jest-environment-jsdom-sixteen",
-    "test:pre": "test --watchAll=false --silent --env jest-environment-jsdom-sixteen",
-    "test:coverage": "test  jest-environment-jsdom-sixteen --coverage --watchAll",
+    "test:pre": "test --watchAll=false --env jest-environment-jsdom-sixteen",
+    "test:coverage": "test jest-environment-jsdom-sixteen --coverage --watchAll",
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
@@ -40,12 +41,9 @@
     },
     "collectCoverage": true,
     "collectCoverageFrom": [
-      "src/**/*.js",
-      "src/**/**/*.js",
-      "src/**/**/**/*.js",
-      "!src/tests/*.js",
-      "!src/**/*.test.js",
-      "!src/**/styles.js"
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
     ]
   },
   "eslintConfig": {

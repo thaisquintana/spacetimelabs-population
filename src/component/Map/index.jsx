@@ -4,6 +4,7 @@ import { MapContainer, GeoJSON, TileLayer } from 'react-leaflet'
 
 import { dataLayer } from '../../constant/index'
 import districts from '../../data/geometrias_bairros.json'
+import PopulationChart from '../ChartPopulation'
 import { Container, GrowthPop, GrowthTitle } from './styles'
 
 const Map = () => {
@@ -41,10 +42,11 @@ const Map = () => {
       {districtId && (
         <GrowthPop>
           <GrowthTitle>
-            <p>Population 2000 - 2006</p>
+            <p>Crescimento Populacional de 2000 a 2006</p>
             <span onClick={onClosePopup}>X</span>
           </GrowthTitle>
           <label>{district}</label>
+          <PopulationChart district={districtId} />
         </GrowthPop>
       )}
     </Container>

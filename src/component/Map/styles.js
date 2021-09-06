@@ -12,11 +12,11 @@ export const GrowthPop = styled.div`
   color: #333;
   position: absolute;
   right: 37px;
-  bottom: 14px;
+  top: 113px;
   border: 1px solid rgb(58 58 58 / 40%);
   z-index: 9999;
-  height: 200px;
-  width: 15%;
+  height: auto;
+  width: 26%;
   padding: 16px;
 
   p {

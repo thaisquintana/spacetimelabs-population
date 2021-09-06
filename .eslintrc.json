@@ -17,6 +17,7 @@
   },
   "plugins": ["react", "prettier", "eslint-plugin-import-helpers", "unused-imports", "react-hooks"],
   "rules": {
+    "react/prop-types": 0,
     "prettier/prettier": ["error"],
     "react/jsx-one-expression-per-line": "off",
     "no-use-before-define": "off",
@@ -43,6 +44,7 @@
   },
   "settings": {
     "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "import/resolver": {
       "babel-plugin-root-import": {
         "rootPathSuffix": "src"
       }

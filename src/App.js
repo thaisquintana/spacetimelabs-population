@@ -1,11 +1,12 @@
 import React from 'react'
-import {Map} from './component/Map/index'
+
+import Map from './component/Map/index'
 function App() {
   return (
-  <>
-    <Map />
-  </>
-  );
+    <>
+      <Map />
+    </>
+  )
 }
 
-export default App;
+export default App
